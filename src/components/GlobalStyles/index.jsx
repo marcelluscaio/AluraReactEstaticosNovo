@@ -144,6 +144,23 @@ template {
 [hidden] {
   display: none;
 }
+
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+:root{
+  --fs-20: 1.25rem;
+
+
+  --gray: #D9D9D9;
+}
+
+.container{
+  width: 96.66%;
+  margin-inline: auto;
+}
 `
 
 export default GlobalStyles
