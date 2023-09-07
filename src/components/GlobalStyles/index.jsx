@@ -146,6 +146,11 @@ template {
 }
 
 
+*{
+  box-sizing: border-box;
+}
+
+
 body{
   font-family: 'Lato', sans-serif;
 }
