@@ -24,12 +24,29 @@ const InputWithStyle = styled.div`
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
   }
+
+  &::after{
+    content: "";
+
+    position: absolute;
+    right: var(--fs-20);
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: var(--fs-20);
+    aspect-ratio: 1;
+
+    background-image: url('/imagens/Vector.svg');
+    background-repeat: no-repeat;
+    background-size: contain
+  }
   input{
     position: relative;
     z-index: 1;
     width: 100%;
     padding-block: .9em;
     padding-inline-start: .8em;
+    padding-inline-end: 2.5em;
     border: none;
 
     background: transparent;
