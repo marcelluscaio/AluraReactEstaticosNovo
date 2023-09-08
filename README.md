@@ -43,6 +43,15 @@
   Mask
   https://nikitahl.com/gradient-border-css
 
+  Deep on masking
+  https://ishadeed.com/article/css-masking/
+  https://css-tricks.com/clipping-masking-css/
+  https://www.youtube.com/watch?v=FCuNtCq3nRg
+
+- Nos itens do Menu:
+  - troquei o uso de img por pseudoelementos
+  - Troquei o uso de width por uma tecnica de espacamento intrinseco
+  - Usei vertical align para alinhar icone e texto (para explorar alternativas ao flex)
 
 
 Figma https://www.figma.com/file/2LFVvhAwy08j6kCaPcnOzs/SpaceApp-%7C-React%3A-arquivos-est%C3%A1ticos-com-integra%C3%A7%C3%A3o-de-conceito-%C3%A1rea-de-component?type=design&node-id=89-4&mode=design&t=Jbm1MnOnZGDa03Yr-0

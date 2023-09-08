@@ -148,6 +148,8 @@ template {
 
 *{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0
 }
 
 
@@ -156,10 +158,14 @@ body{
 }
 
 :root{
+  --fs-16: 1rem;
   --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
 
 
   --gray: #D9D9D9;
+  --purple: #7B78E5;
 }
 
 .container{
