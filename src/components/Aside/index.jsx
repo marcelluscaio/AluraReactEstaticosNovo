@@ -17,10 +17,15 @@ const Aside = () => {
     <aside>
       <nav>
         <ListWithStyle>
-          <ListItem isActive={true}>
+          <ListItem 
+            iconActive={"/icones/home-ativo.png"}
+            iconInactive={"/icones/home-inativo.png"}
+            isActive={true}>
             Início
           </ListItem>
-          <ListItem>
+          <ListItem
+            iconActive={"/icones/mais-vistas-ativo.png"}
+            iconInactive={"/icones/mais-vistas-inativo.png"}>
             Mais Vistas
           </ListItem>
           <li>

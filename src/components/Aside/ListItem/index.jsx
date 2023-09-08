@@ -11,7 +11,7 @@ const ListItemWithStyle = styled.li`
     aspect-ratio: 1;
     margin-right: var(--fs-16);
 
-    background-image: ${props => props.$isActive ? "url('/icones/home-ativo.png')" : "url('/icones/home-inativo.png')"};
+    background-image: ${props => props.$isActive ? `url(${props.$iconActive})` : `url(${props.$iconInactive})`};
     background-repeat: no-repeat;
     background-size: contain;
     
@@ -30,9 +30,8 @@ const ListItemWithStyle = styled.li`
 
 const ListItem = ({children, iconActive, iconInactive, isActive = false}) => {
   return(
-    <ListItemWithStyle $isActive={isActive}>
+    <ListItemWithStyle $isActive={isActive} $iconActive={iconActive} $iconInactive={iconInactive}>
       <a>{children}</a>
-      {console.log(isActive)}
     </ListItemWithStyle>
   )
 }
