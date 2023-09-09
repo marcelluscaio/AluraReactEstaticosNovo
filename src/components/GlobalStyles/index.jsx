@@ -161,6 +161,7 @@ body{
   --fs-16: 1rem;
   --fs-20: 1.25rem;
   --fs-24: 1.5rem;
+  --fs-28: 1.75rem;
   --fs-32: 2rem;
 
 

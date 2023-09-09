@@ -28,21 +28,21 @@ const Aside = () => {
             iconInactive={"/icones/mais-vistas-inativo.png"}>
             Mais Vistas
           </ListItem>
-          <li>
-            <a>Início</a>
-          </li>
-          <li>
-            <a>Mais vistas</a>
-          </li>
-          <li>
-            <a>Mais curtidas</a>
-          </li>
-          <li>
-            <a>Novas</a>
-          </li>
-          <li>
-            <a>Surpreenda-me</a>
-          </li>
+          <ListItem
+            iconActive={"/icones/mais-curtidas-ativo.png"}
+            iconInactive={"/icones/mais-curtidas-inativo.png"}>
+            Mais Curtidas
+          </ListItem>
+          <ListItem
+            iconActive={"/icones/novas-ativo.png"}
+            iconInactive={"/icones/novas-inativo.png"}>
+            Novas
+          </ListItem>
+          <ListItem
+            iconActive={"/icones/surpreenda-me-ativo.png"}
+            iconInactive={"/icones/surpreenda-me-inativo.png"}>
+            Surpreenda-me
+          </ListItem>
         </ListWithStyle>
       </nav>
     </aside>

@@ -1,9 +1,10 @@
 import { styled } from "styled-components";
 
 const ListItemWithStyle = styled.li`
-  
-
-&::before{
+  & + li{
+    margin-top: var(--fs-28);
+  }
+  &::before{
     content: '';
     display: inline-block;
 
@@ -15,10 +16,8 @@ const ListItemWithStyle = styled.li`
     background-repeat: no-repeat;
     background-size: contain;
     
-    
     vertical-align: middle;
   }
-
   a{
     font-size: var(--fs-24);
     line-height: 1.25;
