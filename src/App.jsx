@@ -1,6 +1,7 @@
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import Aside from "./components/Aside";
+import Banner from "./components/Banner";
 import { styled } from "styled-components";
 
 const FundoGradiente = styled.div`
@@ -16,6 +17,7 @@ function App() {
       <Header></Header>
       <section className="container">
         <Aside></Aside>
+        <Banner></Banner>
       </section>
     </ FundoGradiente>
   )

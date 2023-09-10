@@ -163,8 +163,10 @@ body{
   --fs-24: 1.5rem;
   --fs-28: 1.75rem;
   --fs-32: 2rem;
+  --fs-40: 2.5rem;
 
 
+  --white: #FFFFFF;
   --gray: #D9D9D9;
   --purple: #7B78E5;
 }
