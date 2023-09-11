@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 
 const ListItemWithStyle = styled.li`
-  display: flex;
   & + li{
     margin-top: var(--fs-28);
   }
@@ -24,7 +23,6 @@ const ListItemWithStyle = styled.li`
     line-height: 1.25;
     vertical-align: middle;
     color: ${props => props.$isActive ? "var(--purple)" : "var(--gray)"};
-    white-space: nowrap;
   }
 `
 

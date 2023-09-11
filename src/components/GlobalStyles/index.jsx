@@ -168,6 +168,7 @@ body{
   --fs-28: 1.75rem;
   --fs-32: 2rem;
   --fs-40: 2.5rem;
+  --fs-56: 3.5rem;
 
 
   --white: #FFFFFF;

@@ -1,28 +1,37 @@
+import { styled } from "styled-components";
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import Aside from "./components/Aside";
 import Banner from "./components/Banner";
-import { styled } from "styled-components";
+import Gallery from "./components/Gallery";
 
 const FundoGradiente = styled.div`
   background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
-  width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
 
-  .flex{
-    display: flex;
-    gap: 1.73%
+  .grid{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1.73%;
   }
-`
+`;
+
+const Main = styled.main`
+
+`;
+
 
 function App() {
   return (
     <FundoGradiente>
       <GlobalStyles></GlobalStyles>
       <Header></Header>
-      <section className="flex container">
+      <section className="grid container">
         <Aside></Aside>
-        <Banner></Banner>
+        <Main>
+          <Banner></Banner>
+          <Gallery></Gallery>
+        </Main>
       </section>
     </ FundoGradiente>
   )

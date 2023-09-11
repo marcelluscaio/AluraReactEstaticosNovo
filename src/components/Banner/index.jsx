@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledBanner = styled.div`
-  width: 100%;
+  border-radius: 1.4vw;
 
   background-image: url("src/assets/banner.png");
   background-repeat: no-repeat;
@@ -9,6 +9,9 @@ const StyledBanner = styled.div`
 
 
   h1{
+    padding-block: 2.3em;
+    padding-left: 1.6em;
+    
     font-size: var(--fs-40);
     line-height: 1.2;
     font-weight: 400;
