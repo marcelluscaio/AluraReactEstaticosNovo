@@ -8,6 +8,11 @@ const FundoGradiente = styled.div`
   background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
   width: 100%;
   min-height: 100vh;
+
+  .flex{
+    display: flex;
+    gap: 1.73%
+  }
 `
 
 function App() {
@@ -15,7 +20,7 @@ function App() {
     <FundoGradiente>
       <GlobalStyles></GlobalStyles>
       <Header></Header>
-      <section className="container">
+      <section className="flex container">
         <Aside></Aside>
         <Banner></Banner>
       </section>

@@ -146,12 +146,16 @@ template {
 }
 
 
+
+
 *{
   box-sizing: border-box;
   padding: 0;
   margin: 0
 }
-
+h1{
+  margin:  0
+}
 
 body{
   font-family: 'Lato', sans-serif;
