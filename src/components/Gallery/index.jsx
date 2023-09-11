@@ -9,6 +9,7 @@ const Gallery = () => {
   return(
     <StyledGallery>
       <Filter></Filter>
+      <h2></h2>
     </StyledGallery>
   )
 };
