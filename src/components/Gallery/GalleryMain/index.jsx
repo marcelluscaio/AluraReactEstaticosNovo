@@ -2,13 +2,13 @@ import styled from "styled-components";
 import Cards from "./Cards";
 
 const StyledGalleryMain = styled.div`
-
+  margin-top: var(--fs-40);
 `;
 
-const GalleryMain = () => {
+const GalleryMain = ({photos}) => {
   return(
     <StyledGalleryMain>
-      <Cards></Cards>
+      <Cards photos={photos}></Cards>
     </StyledGalleryMain>
   )
 };

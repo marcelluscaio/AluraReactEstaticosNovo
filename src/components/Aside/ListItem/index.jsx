@@ -23,13 +23,14 @@ const ListItemWithStyle = styled.li`
     line-height: 1.25;
     vertical-align: middle;
     color: ${props => props.$isActive ? "var(--purple)" : "var(--gray)"};
+    text-decoration: none;
   }
 `
 
 const ListItem = ({children, iconActive, iconInactive, isActive = false}) => {
   return(
     <ListItemWithStyle $isActive={isActive} $iconActive={iconActive} $iconInactive={iconInactive}>
-      <a>{children}</a>
+      <a href="">{children}</a>
     </ListItemWithStyle>
   )
 }

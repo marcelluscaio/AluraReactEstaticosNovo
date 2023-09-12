@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import photos from "./photos.json";
+import { useState } from "react";
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import Aside from "./components/Aside";
@@ -21,7 +23,9 @@ const Main = styled.main`
 `;
 
 
-function App() {
+const App = () => {
+  const [galleryPhotos, setGalleryPhotos] = useState(photos);
+
   return (
     <FundoGradiente>
       <GlobalStyles></GlobalStyles>
@@ -30,7 +34,7 @@ function App() {
         <Aside></Aside>
         <Main>
           <Banner></Banner>
-          <Gallery></Gallery>
+          <Gallery photos={galleryPhotos}></Gallery>
         </Main>
       </section>
     </ FundoGradiente>
