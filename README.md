@@ -54,7 +54,8 @@
   - Usei vertical align para alinhar icone e texto (para explorar alternativas ao flex)
   - Precisei usar flex para evitar que o a fosse para baixo dos icones (flex + white space no break)
   - Consegui resolver usando grid
-
+- Criei as tags, Aqui segui um caminho diferente do Vini como um todo. Ele usou flexbox column nessa parte.
+- Precisei usar flex-wrap nas tags apos fazer teste com tamanho de fonte 32px
 
 Figma https://www.figma.com/file/2LFVvhAwy08j6kCaPcnOzs/SpaceApp-%7C-React%3A-arquivos-est%C3%A1ticos-com-integra%C3%A7%C3%A3o-de-conceito-%C3%A1rea-de-component?type=design&node-id=89-4&mode=design&t=Jbm1MnOnZGDa03Yr-0
 

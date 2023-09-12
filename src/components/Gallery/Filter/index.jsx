@@ -5,6 +5,7 @@ const StyledFilter = styled.div`
   display: flex;
   align-items: center;
   gap: 4.25vw;
+  flex-wrap: wrap;
   h2{
     color: var(--gray);
     font-weight: 400;
@@ -38,7 +39,9 @@ const Filter = () => {
         <ul>
         {tags.map(tag => 
           <li>
-            <button key={tag.id}>{tag.titulo}</button>
+            <button key={tag.id}>
+              {tag.titulo}
+            </button>
           </li>
           )
         }

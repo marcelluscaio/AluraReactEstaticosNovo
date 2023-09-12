@@ -12,7 +12,7 @@ const FundoGradiente = styled.div`
   .grid{
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 1.73%;
+    column-gap: 1.7vw;
   }
 `;
 

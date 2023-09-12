@@ -174,6 +174,7 @@ body{
   --white: #FFFFFF;
   --gray: #D9D9D9;
   --purple: #7B78E5;
+  --dark-blue: #001634;
 }
 
 .container{
