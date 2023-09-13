@@ -56,7 +56,7 @@
   - Consegui resolver usando grid
 - Criei as tags, Aqui segui um caminho diferente do Vini como um todo. Ele usou flexbox column nessa parte.
 - Precisei usar flex-wrap nas tags apos fazer teste com tamanho de fonte 32px
-
+- Consegui estilizar a scrollbar e melhorar o modal
 
 Fazer:
 - cards usar grid auto-fit

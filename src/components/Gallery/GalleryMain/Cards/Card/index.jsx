@@ -100,33 +100,35 @@ const Card = ({photo}) => {
           </div>
         </footer>
       </CardWithStyle>
-      {/* 
-        Primeira tentativa. Assim nao funcionava, ainda nao entendi o porque.
-
-        <dialog key={photo.id} open={isOpen}>
-        <button onCLick={() => setIsOpen(!isOpen)}>x</button>
-        <img src={photo.path} alt={photo.titulo}  />
-      </dialog> */}
-      {/* 
-        Segunda tentativa. Assim funcionava, mas nao tinha ::backdrop. O MDN recomenda nao usar o open como eu estava fazendo. 
-
-        <Modal key={photo.id} open={isOpen}>
-        <div className="grid">
-          <img src={photo.path} alt={photo.titulo}  />
-          <form method="dialog">
-            <button onClick={() => {setIsOpen(!isOpen)}}>x</button>
-          </form>
-        </div>
-      </Modal> */}
 
       <Modal
         isOpen={isOpen}
         setIsOpen={() => setIsOpen(!isOpen)}
         photoPath={photo.path}
         photoTitle={photo.titulo}
-        photoSource={photo.fonte}        
-      >
+        photoSource={photo.fonte}
+        isLiked={isLiked}
+        setIsLiked={() => setIsLiked(!isLiked)}
+        >
       </Modal>
+        {/* 
+          Primeira tentativa. Assim nao funcionava, ainda nao entendi o porque.
+  
+          <dialog key={photo.id} open={isOpen}>
+          <button onCLick={() => setIsOpen(!isOpen)}>x</button>
+          <img src={photo.path} alt={photo.titulo}  />
+        </dialog> */}
+        {/* 
+          Segunda tentativa. Assim funcionava, mas nao tinha ::backdrop. O MDN recomenda nao usar o open como eu estava fazendo. 
+  
+          <Modal key={photo.id} open={isOpen}>
+          <div className="grid">
+            <img src={photo.path} alt={photo.titulo}  />
+            <form method="dialog">
+              <button onClick={() => {setIsOpen(!isOpen)}}>x</button>
+            </form>
+          </div>
+        </Modal> */}
     </>
   )
 };

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-
+import Button from "../Button";
 import styled from "styled-components";
 
 const ModalWithStyle = styled.dialog`
@@ -25,7 +25,7 @@ const ModalWithStyle = styled.dialog`
 
 
 
-  button{
+  > button{
     position: absolute;
     top: min(1.7vw, 32px);
     right: min(1.7vw, 32px);
@@ -77,8 +77,12 @@ const ModalWithStyle = styled.dialog`
   }
 
   > .wrapper > footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     padding-block: var(--fs-16);
-    padding-inline-start: var(--fs-24);
+    padding-inline: var(--fs-24);
     
     background-color: var(--dark-blue);
 
@@ -101,7 +105,7 @@ const ModalWithStyle = styled.dialog`
 }
 `;
 
-const Modal = ({isOpen, setIsOpen, photoPath, photoTitle, photoSource}) => {
+const Modal = ({isOpen, setIsOpen, photoPath, photoTitle, photoSource, isLiked, setIsLiked}) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -118,8 +122,12 @@ const Modal = ({isOpen, setIsOpen, photoPath, photoTitle, photoSource}) => {
       <div className="wrapper">
         <img src={photoPath} alt={photoTitle}  />
         <footer>
-          <h3>{photoTitle}</h3>
-          <p>{photoSource}</p>
+          <div>
+            <h3>{photoTitle}</h3>
+            <p>{photoSource}</p>
+          </div>
+
+          <Button isLiked={isLiked} setIsLiked={setIsLiked}></Button>
         </footer>
       </div>
       
