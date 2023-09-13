@@ -23,14 +23,13 @@ const StyledCards = styled.div`
   }
 `;
 
-const Cards = ({photos}) => {
-  const [isLiked, setIsLiked] = useState(false);
-  
-  return(
+const Cards = ({photos}) => {  return(
     <StyledCards>
       <h2>Navegue pela galeria</h2>
       <div className="cards__container">
-        {photos.map(photo => <Card photo={photo}></Card>)}
+        {photos.map(photo => 
+          <Card photo={photo}></Card>
+        )}
       </div>
     </StyledCards>
   )

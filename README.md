@@ -57,6 +57,31 @@
 - Criei as tags, Aqui segui um caminho diferente do Vini como um todo. Ele usou flexbox column nessa parte.
 - Precisei usar flex-wrap nas tags apos fazer teste com tamanho de fonte 32px
 
+
+Fazer:
+- cards usar grid auto-fit
+- 
+
+PArei em:
+- Fazer dialog::backdrop funcionar
+- refs:
+https://blog.webdevsimplified.com/2023-04/html-dialog/
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+
+Usei aria label
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label
+
+E tab index
+https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
+
+Ler sobre isso
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility
+
+
+
+
+
 Figma https://www.figma.com/file/2LFVvhAwy08j6kCaPcnOzs/SpaceApp-%7C-React%3A-arquivos-est%C3%A1ticos-com-integra%C3%A7%C3%A3o-de-conceito-%C3%A1rea-de-component?type=design&node-id=89-4&mode=design&t=Jbm1MnOnZGDa03Yr-0
 
 

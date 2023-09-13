@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Modal from "./Modal";
 
 const CardWithStyle = styled.article`
   border-radius: 20px;
@@ -13,6 +14,7 @@ const CardWithStyle = styled.article`
     
     width: 100%;
     aspect-ratio: 448 / 256;
+    object-fit: cover;
   }
 
   h3{
@@ -69,30 +71,67 @@ const CardWithStyle = styled.article`
   .cards__icones > button:last-child{
     background-image: url("/icones/expandir.png");
   }
+
 `;
 
 const Button = styled.button`
   background-image: ${props => props.$isLiked ? 'url("/icones/favorito-ativo.png")' :  'url("/icones/favorito.png")'};
 `;
 
+/* const Modal = styled.dialog`
+
+
+  
+`; */
+
 const Card = ({photo}) => {
 
-  const [isLiked, setIsLiked] = useState(false)
+  const [isLiked, setIsLiked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return(
-    <CardWithStyle key={photo.id} tabIndex="0">
-      <img src={photo.path} alt={photo.titulo} />
-      <footer>
-        <div>
-          <h3>{photo.titulo}</h3>
-          <p>{photo.fonte}</p>
+    <>
+      <CardWithStyle key={photo.id} tabIndex="0">
+        <img src={photo.path} alt={photo.titulo} />
+        <footer>
+          <div>
+            <h3>{photo.titulo}</h3>
+            <p>{photo.fonte}</p>
+          </div>
+          <div className="cards__icones">
+            <Button aria-label="curtir" onClick={() => setIsLiked(!isLiked)} $isLiked={isLiked}></Button>
+            <button aria-label="expandir" onClick={() => {setIsOpen(!isOpen)}}></button>
+          </div>
+        </footer>
+      </CardWithStyle>
+      {/* 
+        Primeira tentativa. Assim nao funcionava, ainda nao entendi o porque.
+
+        <dialog key={photo.id} open={isOpen}>
+        <button onCLick={() => setIsOpen(!isOpen)}>x</button>
+        <img src={photo.path} alt={photo.titulo}  />
+      </dialog> */}
+      {/* 
+        Segunda tentativa. Assim funcionava, mas nao tinha ::backdrop. O MDN recomenda nao usar o open como eu estava fazendo. 
+
+        <Modal key={photo.id} open={isOpen}>
+        <div className="grid">
+          <img src={photo.path} alt={photo.titulo}  />
+          <form method="dialog">
+            <button onClick={() => {setIsOpen(!isOpen)}}>x</button>
+          </form>
         </div>
-        <div className="cards__icones">
-          <Button aria-label="curtir" onClick={() => setIsLiked(!isLiked)} $isLiked={isLiked}></Button>
-          <button aria-label="expandir"></button>
-        </div>
-      </footer>
-    </CardWithStyle>
+      </Modal> */}
+
+      <Modal
+        isOpen={isOpen}
+        setIsOpen={() => setIsOpen(!isOpen)}
+        photoPath={photo.path}
+        photoTitle={photo.titulo}        
+      >
+
+      </Modal>
+    </>
   )
 };
 
