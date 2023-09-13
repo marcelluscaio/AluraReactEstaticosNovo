@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Modal from "./Modal";
 
 const CardWithStyle = styled.article`
-  border-radius: 20px;
+  border-radius: min(1.5vw, 30px);
 
   color: var(--white);
 
@@ -127,9 +127,9 @@ const Card = ({photo}) => {
         isOpen={isOpen}
         setIsOpen={() => setIsOpen(!isOpen)}
         photoPath={photo.path}
-        photoTitle={photo.titulo}        
+        photoTitle={photo.titulo}
+        photoSource={photo.fonte}        
       >
-
       </Modal>
     </>
   )

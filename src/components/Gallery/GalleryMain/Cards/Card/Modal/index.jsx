@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 const ModalWithStyle = styled.dialog`
+
   position: fixed;
   top: 50%;
   left: 50%;
@@ -10,27 +11,79 @@ const ModalWithStyle = styled.dialog`
 
   width: 80.3%;
   max-width: 1200px;
+  aspect-ratio: 1156/740;
+  max-height: 95vh;
   border: none;
+  
+  border-radius: min(1.5vw, 30px);
+  overflow-x: hidden;
+
+  background: none;
 
   &::backdrop{
     background-color: rgba(0, 0, 0, 0.7);
   }
-  & > .grid{
+
+  button{
+    position: absolute;
+    top: min(1.7vw, 32px);
+    right: min(1.7vw, 32px);
+
+    width: max(2.8%, 1.25rem);
+    aspect-ratio: 1;
+    border: none;
+
+    background-color: transparent;
+    background-image: url(/icones/fechar.png);
+    background-size: 66% 66%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+  }
+
+  > .wrapper{
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr;
+
+    height: 100%;
+  }
+
+  > .wrapper > img{
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 1156 / 660;
+
+    object-fit: cover;
+  }
+
+  > .wrapper > footer{
+    padding-block: var(--fs-16);
+    padding-inline-start: var(--fs-24);
     
-    aspect-ratio: 1156/740;
-    max-height: 95vh;
+    background-color: var(--dark-blue);
 
+    color: var(--white);
 
-    img{
-      height: 100%;
-
+    h3{
+      font-size: var(--fs-20);
+      font-weight: 700;
+      line-height: 1.2;
     }
+  
+    h3 + p{
+      padding-bottom: .065em;
+      margin-top: .25em;
+  
+      font-size: var(--fs-16);
+      line-height: 1.2;
+    }
+  }
 }
 `;
 
-const Modal = ({isOpen, setIsOpen, photoPath, photoTitle}) => {
+const Modal = ({isOpen, setIsOpen, photoPath, photoTitle, photoSource}) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -43,12 +96,15 @@ const Modal = ({isOpen, setIsOpen, photoPath, photoTitle}) => {
       ref={ref}
       onCancel={setIsOpen}
     >
-      <div className="grid">
+      <button onClick={setIsOpen} aria-label="Close"></button>
+      <div className="wrapper">
         <img src={photoPath} alt={photoTitle}  />
-        <form method="dialog">
-          <button onClick={setIsOpen}>x</button>
-        </form>
+        <footer>
+          <h3>{photoTitle}</h3>
+          <p>{photoSource}</p>
+        </footer>
       </div>
+      
     </ModalWithStyle>
   )
 };
