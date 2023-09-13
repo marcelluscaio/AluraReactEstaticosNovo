@@ -11,18 +11,19 @@ const ModalWithStyle = styled.dialog`
 
   width: 80.3%;
   max-width: 1200px;
-  aspect-ratio: 1156/740;
-  max-height: 95vh;
+  
   border: none;
   
   border-radius: min(1.5vw, 30px);
-  overflow-x: hidden;
+  overflow: hidden;
 
   background: none;
 
   &::backdrop{
     background-color: rgba(0, 0, 0, 0.7);
   }
+
+
 
   button{
     position: absolute;
@@ -46,7 +47,24 @@ const ModalWithStyle = styled.dialog`
     display: grid;
     grid-template-rows: auto 1fr;
 
-    height: 100%;
+    width: 100%;
+    aspect-ratio: 1156/740;
+    max-height: 95vh;
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar{
+      width: 1rem;
+  
+      background-color: var(--dark-blue)
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: var(--purple);
+  
+      box-shadow: inset 1rem 0 rgba(0, 0, 0, .5)
+    }
+
+
   }
 
   > .wrapper > img{

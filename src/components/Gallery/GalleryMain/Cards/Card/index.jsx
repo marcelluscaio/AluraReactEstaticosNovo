@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Button from "./Button";
 import Modal from "./Modal";
 
 const CardWithStyle = styled.article`
@@ -74,15 +75,6 @@ const CardWithStyle = styled.article`
 
 `;
 
-const Button = styled.button`
-  background-image: ${props => props.$isLiked ? 'url("/icones/favorito-ativo.png")' :  'url("/icones/favorito.png")'};
-`;
-
-/* const Modal = styled.dialog`
-
-
-  
-`; */
 
 const Card = ({photo}) => {
 
@@ -99,7 +91,11 @@ const Card = ({photo}) => {
             <p>{photo.fonte}</p>
           </div>
           <div className="cards__icones">
-            <Button aria-label="curtir" onClick={() => setIsLiked(!isLiked)} $isLiked={isLiked}></Button>
+            <Button 
+              isLiked={isLiked}
+              setIsLiked={() => setIsLiked(!isLiked)}
+            >
+            </Button>
             <button aria-label="expandir" onClick={() => {setIsOpen(!isOpen)}}></button>
           </div>
         </footer>
