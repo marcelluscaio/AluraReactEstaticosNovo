@@ -40,7 +40,7 @@ const ModalWithStyle = styled.dialog`
     background-repeat: no-repeat;
     background-position: center;
 
-
+    cursor: pointer;
   }
 
   > .wrapper{
@@ -51,14 +51,17 @@ const ModalWithStyle = styled.dialog`
     aspect-ratio: 1156/740;
     max-height: 95vh;
 
-    overflow-y: scroll;
+    overflow-y: auto;
+    /*Foi necessario colocar auto porque o elemento herda do elemento pai o hidden. Colocar scroll deixava o espaco do scroll mesmo quando nao necessario*/
 
     &::-webkit-scrollbar{
-      width: 1rem;
+      width: min(1.4vw, 1rem);
   
       background-color: var(--dark-blue)
     }
     &::-webkit-scrollbar-thumb{
+      border-radius: min(1.4vw, 1rem);
+      
       background-color: var(--purple);
   
       box-shadow: inset 1rem 0 rgba(0, 0, 0, .5)
@@ -72,6 +75,7 @@ const ModalWithStyle = styled.dialog`
 
     width: 100%;
     aspect-ratio: 1156 / 660;
+    max-height: calc(95vh * 0.9);
 
     object-fit: cover;
   }

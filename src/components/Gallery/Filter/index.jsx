@@ -5,7 +5,6 @@ const StyledFilter = styled.div`
   display: flex;
   align-items: center;
   gap: 4.25vw;
-  flex-wrap: wrap;
   h2{
     color: var(--gray);
     font-weight: 400;
@@ -14,6 +13,7 @@ const StyledFilter = styled.div`
   }
   ul{
     display: flex;
+    flex-wrap: wrap;
     gap: 1.64vw;
 
     list-style: none;
@@ -27,19 +27,21 @@ const StyledFilter = styled.div`
       color: var(--white);
       font-size: var(--fs-24);
       line-height: 1;
+
+      cursor: pointer;
     }
   }
 `;
 
-const Filter = () => {
+const Filter = ({setFilter}) => {
   return(
     <StyledFilter>
       <h2>Busque por tags:</h2>
       <nav>
         <ul>
         {tags.map(tag => 
-          <li>
-            <button key={tag.id}>
+          <li key={tag.id}>
+            <button  onClick={() => setFilter(tag.id)}>
               {tag.titulo}
             </button>
           </li>

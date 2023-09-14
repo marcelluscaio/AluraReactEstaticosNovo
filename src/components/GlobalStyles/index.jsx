@@ -181,6 +181,20 @@ body{
   width: 96.66%;
   margin-inline: auto;
 }
+
+::-webkit-scrollbar{
+  width: min(1.4vw, 1rem);
+
+  background-color: var(--dark-blue)
+}
+::-webkit-scrollbar-thumb{
+  border-radius: min(1.4vw, 1rem);
+  
+  background-color: var(--purple);
+
+  box-shadow: inset 1rem 0 rgba(0, 0, 0, .5);
+
+}
 `
 
 export default GlobalStyles

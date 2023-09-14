@@ -65,9 +65,16 @@ Fazer:
 PArei em:
 - Fazer dialog::backdrop funcionar
 - refs:
-https://blog.webdevsimplified.com/2023-04/html-dialog/
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+
+https://stackoverflow.com/questions/76616735/tailwind-backdrop-not-applying-to-dialog-element
+
+https://medium.com/@dimterion/modals-with-html-dialog-element-in-javascript-and-react-fb23c885d62e#:~:text=In%20general%2C%20makes,as%20the%20modal%20is%20opened.
+
+
+
+https://blog.webdevsimplified.com/2023-04/html-dialog/
 
 Usei aria label
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label

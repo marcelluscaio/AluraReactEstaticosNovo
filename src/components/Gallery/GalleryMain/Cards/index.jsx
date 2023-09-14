@@ -15,6 +15,7 @@ const StyledCards = styled.div`
     display:grid;
     /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))*/
     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1.7vw;
 
     margin-top: var(--fs-24);
@@ -23,12 +24,12 @@ const StyledCards = styled.div`
   }
 `;
 
-const Cards = ({photos}) => {  return(
+const Cards = ({photos, filter}) => {  return(
     <StyledCards>
       <h2>Navegue pela galeria</h2>
       <div className="cards__container">
-        {photos.map(photo => 
-          <Card photo={photo}></Card>
+        {photos.filter(photo => filter === 0 || photo.tagId === filter).map(photo => 
+          <Card key={photo.id} photo={photo}></Card>
         )}
       </div>
     </StyledCards>

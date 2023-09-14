@@ -15,6 +15,11 @@ const FundoGradiente = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 1.7vw;
+
+    @media (max-width: 50em){
+    &{
+      grid-template-columns: 1fr;
+    }
   }
 `;
 
@@ -25,6 +30,8 @@ const Main = styled.main`
 
 const App = () => {
   const [galleryPhotos, setGalleryPhotos] = useState(photos);
+  const [filter, setFilter] = useState(0)
+
 
   return (
     <FundoGradiente>
@@ -34,7 +41,7 @@ const App = () => {
         <Aside></Aside>
         <Main>
           <Banner></Banner>
-          <Gallery photos={galleryPhotos}></Gallery>
+          <Gallery photos={galleryPhotos} filter={filter} setFilter={setFilter}></Gallery>
         </Main>
       </section>
     </ FundoGradiente>

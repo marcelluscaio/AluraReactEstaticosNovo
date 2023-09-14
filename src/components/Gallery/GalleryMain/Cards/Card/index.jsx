@@ -4,6 +4,10 @@ import Button from "./Button";
 import Modal from "./Modal";
 
 const CardWithStyle = styled.article`
+  display: grid;
+  grid-template-rows: auto 1fr;
+  /*Isso eh necessario para quando um card for maior que o que esta ao lado*/
+
   border-radius: min(1.5vw, 30px);
 
   color: var(--white);

@@ -6,11 +6,11 @@ const StyledGallery = styled.section`
   margin-top: var(--fs-56);
 `;
 
-const Gallery = ({photos = []}) => {
+const Gallery = ({photos = [], filter, setFilter}) => {
   return(
     <StyledGallery>
-      <Filter></Filter>
-      <GalleryMain photos={photos}></GalleryMain>
+      <Filter setFilter={setFilter} ></Filter>
+      <GalleryMain photos={photos} filter={filter} ></GalleryMain>
     </StyledGallery>
   )
 };
