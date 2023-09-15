@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledBanner = styled.div`
   border-radius: 1.4vw;
 
-  background-image: url("src/assets/banner.png");
+  background-image: url("/imagens/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
 
