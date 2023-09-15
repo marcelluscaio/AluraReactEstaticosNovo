@@ -80,7 +80,7 @@ const Popular = ({photos}) => {
   return(
     <PopularWithStyle>
       <h2>Populares</h2>
-      {photos.map(photo => <img key={photo.id} src={photo.path} alt={photo.titulo} />)}
+      {photos.map((photo, index) => index < 5 && <img key={photo.id} src={photo.path} alt={photo.titulo} />)}
       <a href="">Ver Mais</a>
     </PopularWithStyle>
   )
