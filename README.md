@@ -68,6 +68,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
 ## Desafios
 
 ### Borda gradiente
+> desenvolver
 - INput com border colorida
   - Border image nao funciona com border radius
       border-image: linear-gradient(180deg, green, orange);
