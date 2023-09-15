@@ -5,6 +5,8 @@ import Popular from "./Popular";
 const StyledGalleryMain = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
+
+  /* Queria fazer isso de forma responsiva sem usar media query, mas nao consegui) */
   /*grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr) minmax(10rem, auto));*/
   column-gap: 1.7vw;
 
@@ -17,10 +19,11 @@ const StyledGalleryMain = styled.div`
   }
 `;
 
-const GalleryMain = ({photos, filter}) => {
+const GalleryMain = ({photos, filter, isLiked, setIsLiked}) => {
+  
   return(
     <StyledGalleryMain>
-      <Cards photos={photos} filter={filter}></Cards>
+      <Cards photos={photos} filter={filter} isLiked={isLiked} setIsLiked={setIsLiked}></Cards>
       <Popular photos={photos}></Popular>
     </StyledGalleryMain>
   )

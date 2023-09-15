@@ -24,12 +24,14 @@ const StyledCards = styled.div`
   }
 `;
 
-const Cards = ({photos, filter}) => {  return(
+const Cards = ({photos, filter, isLiked, setIsLiked}) => {  
+
+  return(
     <StyledCards>
       <h2>Navegue pela galeria</h2>
       <div className="cards__container">
         {photos.filter(photo => filter === 0 || photo.tagId === filter).map(photo => 
-          <Card key={photo.id} photo={photo}></Card>
+          <Card key={photo.id} photo={photo} isLiked={isLiked} setIsLiked={setIsLiked}></Card>
         )}
       </div>
     </StyledCards>

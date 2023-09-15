@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import photos from "./photos.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import Aside from "./components/Aside";
@@ -30,8 +30,9 @@ const Main = styled.main`
 
 const App = () => {
   const [galleryPhotos, setGalleryPhotos] = useState(photos);
-  const [filter, setFilter] = useState(0)
+  const [filter, setFilter] = useState(0);
 
+  const [isLiked, setIsLiked] = useState([]);
 
   return (
     <FundoGradiente>
@@ -41,7 +42,7 @@ const App = () => {
         <Aside></Aside>
         <Main>
           <Banner></Banner>
-          <Gallery photos={galleryPhotos} filter={filter} setFilter={setFilter}></Gallery>
+          <Gallery photos={galleryPhotos} filter={filter} setFilter={setFilter} isLiked={isLiked} setIsLiked={setIsLiked}></Gallery>
         </Main>
       </section>
     </ FundoGradiente>

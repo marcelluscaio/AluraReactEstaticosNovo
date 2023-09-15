@@ -109,7 +109,7 @@ const ModalWithStyle = styled.dialog`
 }
 `;
 
-const Modal = ({isOpen, setIsOpen, photoPath, photoTitle, photoSource, isLiked, setIsLiked}) => {
+const Modal = ({isOpen, setIsOpen, photoPath, photoTitle, photoSource, isLiked, setIsLiked, id}) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -131,7 +131,7 @@ const Modal = ({isOpen, setIsOpen, photoPath, photoTitle, photoSource, isLiked, 
             <p>{photoSource}</p>
           </div>
 
-          <Button isLiked={isLiked} setIsLiked={setIsLiked}></Button>
+          <Button isLiked={isLiked} setIsLiked={setIsLiked} id={id}></Button>
         </footer>
       </div>
       

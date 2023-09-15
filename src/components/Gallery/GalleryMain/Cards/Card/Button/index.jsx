@@ -15,9 +15,17 @@ cursor: pointer;
 background-image: ${props => props.$isLiked ? 'url("/icones/favorito-ativo.png")' :  'url("/icones/favorito.png")'};
 `;
 
-const Button = ({isLiked, setIsLiked}) => {
+const Button = ({isLiked, setIsLiked, id}) => {
+  const isThisLiked = isLiked.some(item => item === id);
   return(
-    <ButtonWithStyle aria-label="curtir" onClick={setIsLiked} $isLiked={isLiked}></ButtonWithStyle>
+    <ButtonWithStyle aria-label="curtir" 
+      onClick={() => 
+        {
+          const newValue = isThisLiked ? isLiked.filter(item => item !== id) :  [...isLiked, id];
+          setIsLiked(newValue);
+        }
+      } 
+      $isLiked={isThisLiked}></ButtonWithStyle>
   )
 };
 

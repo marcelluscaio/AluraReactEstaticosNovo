@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import tags from "./tags.json";
+import { useState } from "react";
 
 const StyledFilter = styled.div`
   display: flex;
@@ -17,11 +18,12 @@ const StyledFilter = styled.div`
     gap: 1.64vw;
 
     list-style: none;
+
     button{
       border: 2px solid transparent;
       border-radius: .42em;
       padding: .42em .34em .5em;
-
+      background-color: transparent;
       background: #dfdfdf45;
 
       color: var(--white);
@@ -29,11 +31,39 @@ const StyledFilter = styled.div`
       line-height: 1;
 
       cursor: pointer;
+      isolation: isolate;
+
+      &.gradient-border{
+        position: relative;
+        
+        &::before{
+          content: "";
+
+          position: absolute;
+          inset: -2px;
+
+          border: 2px solid transparent;
+          border-radius: .75vw;
+
+          background: linear-gradient(120deg, #c98cf1, #7b78e5) border-box;
+          mask-image: 
+            linear-gradient(#ffffff, #ffffff) padding-box, 
+            linear-gradient(#ffffff, #ffffff);
+          -webkit-mask: 
+            linear-gradient(#ffffff, #ffffff) padding-box, 
+            linear-gradient(#ffffff, #ffffff);
+          -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
+        }
+
+        }
+      }
     }
   }
 `;
 
 const Filter = ({setFilter}) => {
+  const [isActive, setIsActive] = useState(0);
   return(
     <StyledFilter>
       <h2>Busque por tags:</h2>
@@ -41,7 +71,14 @@ const Filter = ({setFilter}) => {
         <ul>
         {tags.map(tag => 
           <li key={tag.id}>
-            <button  onClick={() => setFilter(tag.id)}>
+            <button  
+              onClick={() =>
+                { setFilter(tag.id);
+                  setIsActive(tag.id);
+                }
+              }
+              className={isActive===tag.id ? "gradient-border" : ""}
+            >
               {tag.titulo}
             </button>
           </li>

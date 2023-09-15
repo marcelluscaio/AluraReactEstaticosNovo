@@ -80,11 +80,10 @@ const CardWithStyle = styled.article`
 `;
 
 
-const Card = ({photo}) => {
-
-  const [isLiked, setIsLiked] = useState(false);
+const Card = ({photo, isLiked, setIsLiked}) => {
+  
   const [isOpen, setIsOpen] = useState(false)
-
+  
   return(
     <>
       <CardWithStyle key={photo.id} tabIndex="0">
@@ -97,7 +96,8 @@ const Card = ({photo}) => {
           <div className="cards__icones">
             <Button 
               isLiked={isLiked}
-              setIsLiked={() => setIsLiked(!isLiked)}
+              setIsLiked={setIsLiked}
+              id={photo.id}
             >
             </Button>
             <button aria-label="expandir" onClick={() => {setIsOpen(!isOpen)}}></button>
@@ -112,7 +112,8 @@ const Card = ({photo}) => {
         photoTitle={photo.titulo}
         photoSource={photo.fonte}
         isLiked={isLiked}
-        setIsLiked={() => setIsLiked(!isLiked)}
+        setIsLiked={setIsLiked}
+        id={photo.id}
         >
       </Modal>
         {/* 
