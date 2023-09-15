@@ -61,10 +61,16 @@ const InputWithStyle = styled.div`
   }
 `
 
-const Input = () => {
+const Input = ({setFilter}) => {
   return(
     <InputWithStyle>
-      <input placeholder="O que você procura?" />
+      <input 
+        placeholder="O que você procura?"
+        onChange={event => {
+          const value = event.target.value;
+          setFilter(value);
+        }}
+      />
     </InputWithStyle>
   )
 }

@@ -26,11 +26,13 @@ const StyledCards = styled.div`
 
 const Cards = ({photos, filter, isLiked, setIsLiked}) => {  
 
+  const filteredPhotos = Number.isInteger(filter) ? photos.filter(photo => filter === 0 || photo.tagId === filter) : photos.filter(photo => photo.titulo === filter);
+
   return(
     <StyledCards>
       <h2>Navegue pela galeria</h2>
       <div className="cards__container">
-        {photos.filter(photo => filter === 0 || photo.tagId === filter).map(photo => 
+        {filteredPhotos.map(photo => 
           <Card key={photo.id} photo={photo} isLiked={isLiked} setIsLiked={setIsLiked}></Card>
         )}
       </div>

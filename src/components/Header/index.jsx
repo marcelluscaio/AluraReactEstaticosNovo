@@ -15,11 +15,11 @@ const HeaderWithStyle = styled.header`
 
 `
 
-const Header = () => {
+const Header = ({setFilter}) => {
   return(
     <HeaderWithStyle className="container">
       <img src="/imagens/Logo2.png" />
-      <Input></Input>
+      <Input setFilter={setFilter}></Input>
     </HeaderWithStyle>
   )
 }
