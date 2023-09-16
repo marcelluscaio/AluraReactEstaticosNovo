@@ -15,7 +15,7 @@ const StyledFilter = styled.div`
   ul{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.64vw;
+    gap: max(1.64vw, 10px);
 
     list-style: none;
 
