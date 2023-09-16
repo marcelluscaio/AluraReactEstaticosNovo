@@ -24,9 +24,18 @@ const StyledCards = styled.div`
   }
 `;
 
-const Cards = ({photos, filter, isLiked, setIsLiked}) => {  
+const Cards = ({photos, filterTag, filterString, isLiked, setIsLiked}) => {  
+  /* Fazer: filter tag e filter String. Juntar os dois: filter tag && filter string */
+  /* const filteredPhotos = Number.isInteger(filter) ? photos.filter(photo => filter === 0 || photo.tagId === filter) : photos.filter(photo => photo.titulo === filter); */
+  function normalizeString(string){
+    return string.replace(" ", "").toLowerCase();
+  };
 
-  const filteredPhotos = Number.isInteger(filter) ? photos.filter(photo => filter === 0 || photo.tagId === filter) : photos.filter(photo => photo.titulo === filter);
+  function compareString(string, substring){
+    return normalizeString(string).includes(normalizeString(substring));
+  };
+  
+  const filteredPhotos = photos.filter(photo => (filterTag === 0 || photo.tagId === filterTag) && (filterString === '' || compareString(photo.titulo, filterString)));
 
   return(
     <StyledCards>

@@ -30,18 +30,19 @@ const Main = styled.main`
 
 const App = () => {
   const [galleryPhotos, setGalleryPhotos] = useState(photos);
-  const [filter, setFilter] = useState(0);
+  const [filterTag, setFilterTag] = useState(0);
+  const [filterString, setFilterString] = useState('');
   const [isLiked, setIsLiked] = useState([]);
 
   return (
     <FundoGradiente>
       <GlobalStyles></GlobalStyles>
-      <Header setFilter={setFilter}></Header>
+      <Header setFilterString={setFilterString}></Header>
       <section className="grid container">
         <Aside></Aside>
         <Main>
           <Banner></Banner>
-          <Gallery photos={galleryPhotos} filter={filter} setFilter={setFilter} isLiked={isLiked} setIsLiked={setIsLiked}></Gallery>
+          <Gallery photos={galleryPhotos} filterTag={filterTag} filterString={filterString} setFilterTag={setFilterTag} isLiked={isLiked} setIsLiked={setIsLiked}></Gallery>
         </Main>
       </section>
     </ FundoGradiente>

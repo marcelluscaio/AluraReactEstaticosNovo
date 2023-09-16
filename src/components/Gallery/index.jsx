@@ -6,11 +6,11 @@ const StyledGallery = styled.section`
   margin-top: var(--fs-56);
 `;
 
-const Gallery = ({photos = [], filter, setFilter, isLiked, setIsLiked}) => {
+const Gallery = ({photos = [], filterTag, filterString, setFilterTag, isLiked, setIsLiked}) => {
   return(
     <StyledGallery>
-      <Filter setFilter={setFilter} ></Filter>
-      <GalleryMain photos={photos} filter={filter} isLiked={isLiked} setIsLiked={setIsLiked} ></GalleryMain>
+      <Filter setFilterTag={setFilterTag} ></Filter>
+      <GalleryMain photos={photos} filterTag={filterTag} filterString={filterString} isLiked={isLiked} setIsLiked={setIsLiked} ></GalleryMain>
     </StyledGallery>
   )
 };

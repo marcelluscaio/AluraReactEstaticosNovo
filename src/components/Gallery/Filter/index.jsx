@@ -62,7 +62,7 @@ const StyledFilter = styled.div`
   }
 `;
 
-const Filter = ({setFilter}) => {
+const Filter = ({setFilterTag}) => {
   const [isActive, setIsActive] = useState(0);
   return(
     <StyledFilter>
@@ -73,7 +73,7 @@ const Filter = ({setFilter}) => {
           <li key={tag.id}>
             <button  
               onClick={() =>
-                { setFilter(tag.id);
+                { setFilterTag(tag.id);
                   setIsActive(tag.id);
                 }
               }

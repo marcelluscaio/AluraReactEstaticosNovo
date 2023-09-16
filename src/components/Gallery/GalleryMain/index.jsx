@@ -19,11 +19,11 @@ const StyledGalleryMain = styled.div`
   }
 `;
 
-const GalleryMain = ({photos, filter, isLiked, setIsLiked}) => {
+const GalleryMain = ({photos, filterTag, filterString, isLiked, setIsLiked}) => {
   
   return(
     <StyledGalleryMain>
-      <Cards photos={photos} filter={filter} isLiked={isLiked} setIsLiked={setIsLiked}></Cards>
+      <Cards photos={photos} filterTag={filterTag} filterString={filterString} isLiked={isLiked} setIsLiked={setIsLiked}></Cards>
       <Popular photos={photos}></Popular>
     </StyledGalleryMain>
   )

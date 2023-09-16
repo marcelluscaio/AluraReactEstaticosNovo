@@ -8,11 +8,18 @@ const CardWithStyle = styled.article`
   grid-template-rows: auto 1fr;
   /*Isso eh necessario para quando um card for maior que o que esta ao lado*/
 
+  width: min(100%, 40vw);
   border-radius: min(1.5vw, 30px);
 
   color: var(--white);
 
   overflow: hidden;
+
+  @media (max-width: 75em){
+    &{
+      width: 100%;
+    }
+  }
 
   & > img{
     display: block;
