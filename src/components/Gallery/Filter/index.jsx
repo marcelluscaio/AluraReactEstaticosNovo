@@ -43,7 +43,7 @@ const StyledFilter = styled.div`
           inset: -2px;
 
           border: 2px solid transparent;
-          border-radius: .75vw;
+          border-radius: .42em;
 
           background: linear-gradient(120deg, #c98cf1, #7b78e5) border-box;
           mask-image: 
