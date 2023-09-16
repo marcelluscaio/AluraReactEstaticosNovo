@@ -19,6 +19,7 @@ const FundoGradiente = styled.div`
     @media (max-width: 50em){
     &{
       grid-template-columns: 1fr;
+      row-gap: 5vh
     }
   }
 `;

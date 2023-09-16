@@ -54,6 +54,10 @@ const ModalWithStyle = styled.dialog`
     overflow-y: auto;
     /*Foi necessario colocar auto porque o elemento herda do elemento pai o hidden. Colocar scroll deixava o espaco do scroll mesmo quando nao necessario*/
 
+    @media (max-width: 45em){
+      aspect-ratio: 3 / 4
+    }
+
     &::-webkit-scrollbar{
       width: min(1.4vw, 1rem);
   
@@ -74,10 +78,14 @@ const ModalWithStyle = styled.dialog`
     display: block;
 
     width: 100%;
-    aspect-ratio: 1156 / 660;
+    aspect-ratio: 1156 / 600;
     max-height: calc(95vh * 0.9);
 
     object-fit: cover;
+
+    @media (max-width: 45em){
+      aspect-ratio: 4 / 3
+    }
   }
 
   > .wrapper > footer{
