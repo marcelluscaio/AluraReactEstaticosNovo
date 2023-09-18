@@ -16,6 +16,14 @@ const StyledBanner = styled.div`
     line-height: 1.2;
     font-weight: 400;
     color: var(--white);
+    @media (max-width: 30em){
+      &{
+        padding-left: 0;
+
+        text-align: center;
+      }
+    }
+
     span{
       display: block
     }

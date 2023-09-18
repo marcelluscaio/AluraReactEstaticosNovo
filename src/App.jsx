@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { styled } from "styled-components";
 import photos from "./photos.json";
-import { useEffect, useState } from "react";
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import Aside from "./components/Aside";
@@ -24,13 +24,8 @@ const FundoGradiente = styled.div`
   }
 `;
 
-const Main = styled.main`
-
-`;
-
-
 const App = () => {
-  const [galleryPhotos, setGalleryPhotos] = useState(photos);
+  const galleryPhotos = photos;
   const [filterTag, setFilterTag] = useState(0);
   const [filterString, setFilterString] = useState('');
   const [isLiked, setIsLiked] = useState([]);
@@ -41,10 +36,10 @@ const App = () => {
       <Header setFilterString={setFilterString}></Header>
       <section className="grid container">
         <Aside></Aside>
-        <Main>
+        <main>
           <Banner></Banner>
           <Gallery photos={galleryPhotos} filterTag={filterTag} filterString={filterString} setFilterTag={setFilterTag} isLiked={isLiked} setIsLiked={setIsLiked}></Gallery>
-        </Main>
+        </main>
       </section>
     </ FundoGradiente>
   )

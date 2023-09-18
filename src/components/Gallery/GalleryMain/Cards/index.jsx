@@ -13,20 +13,19 @@ const StyledCards = styled.div`
 
   .cards__container{
     display:grid;
-    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))*/
-    grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1.7vw;
 
     margin-top: var(--fs-24);
 
+    @media (max-width: 30em){
+      grid-template-columns: 1fr;
+    }
     
   }
 `;
 
-const Cards = ({photos, filterTag, filterString, isLiked, setIsLiked}) => {  
-  /* Fazer: filter tag e filter String. Juntar os dois: filter tag && filter string */
-  /* const filteredPhotos = Number.isInteger(filter) ? photos.filter(photo => filter === 0 || photo.tagId === filter) : photos.filter(photo => photo.titulo === filter); */
+const Cards = ({photos, filterTag, filterString, isLiked, setIsLiked}) => { 
   function normalizeString(string){
     return string.replace(" ", "").toLowerCase();
   };

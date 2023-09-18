@@ -1,3 +1,8 @@
+FAzer:
+gallery grid: grid-template columns 1fr em mobile
+
+banner h1 padding left0, text align center
+
 > criar em inglês
 
 # SpaceApp
