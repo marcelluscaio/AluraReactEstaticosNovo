@@ -179,6 +179,7 @@ body{
 
 .container{
   width: 96.66%;
+  max-width: 132rem;
   margin-inline: auto;
 }
 

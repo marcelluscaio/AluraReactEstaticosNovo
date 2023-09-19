@@ -23,6 +23,7 @@ const StyledFilter = styled.div`
       border: 2px solid transparent;
       border-radius: .42em;
       padding: .42em .34em .5em;
+      
       background-color: transparent;
       background: #dfdfdf45;
 
