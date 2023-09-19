@@ -6,8 +6,10 @@ const StyledGalleryMain = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
 
-  /* Queria fazer isso de forma responsiva sem usar media query, mas nao consegui) */
-  /*grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr) minmax(10rem, auto));*/
+  /* Queria fazer isso de forma responsiva sem usar media query, mas nao consegui)
+  Quando temos dois valores, o minimo de colunas eh a quantidade de valores inseridos
+  */
+  /*grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr) minmax(auto, 10rem));*/
   column-gap: 1.7vw;
 
   margin-top: var(--fs-40);
