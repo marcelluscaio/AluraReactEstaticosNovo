@@ -127,6 +127,8 @@ Found a bug? Want to propose an improvement? Feel free to open a PR or issue.
 - [O que eu adicionei ao projeto](#adicionei)
 - [Desafios](#desafios)
 - [Leiaute](#leiaute)
+- [Acesse](#acesse)
+- [Contribuições](#contribuicoes)
 
 <br>
 <br>
@@ -227,6 +229,6 @@ Convido você a observar a responsividade em diferentes telas e tamanhos de font
 <br>
 <br>
 
-## <a id="contribuir">Contribuições</a>
+## <a id="contribucoes">Contribuições</a>
 
 Encontrou algum bug? Quer propor alguma melhoria? Fique à vontade para abrir um PR ou issue.
