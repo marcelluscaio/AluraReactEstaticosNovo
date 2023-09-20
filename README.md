@@ -1,15 +1,21 @@
-[Sobre](#sobre)
+
 
 > criar em inglês
 
 # SpaceApp
+
+## Índice
+
+- [Sobre o projeto](#sobre)
+- [O que eu adicionei ao projeto](#adicionei)
+- [Desafios](#desafios)
 
 ## <a id="sobre">Sobre o projeto</a>
 
 Este projeto foi criado durante o curso da Alura "React: estilize componentes com Styled Components e manipule arquivos estáticos". No curso foram abordadas boas práticas no desenvolvimento em React, além da utilização da biblioteca Styled Components.
 
 
-## O que eu adicionei ao projeto
+## <a id="adicionei">O que eu adicionei ao projeto</a>
 
 Durante o desenvolvimento do curso busquei resolver alguns problemas de forma diferente da realizada pelos instrutores.
 
@@ -71,12 +77,11 @@ ul{
 - Estilizei a scrollbar em navegadores que utilizam chromium (Como Google Chrome e Microsoft Edge);
 
 
-## Desafios
+## <a id="desafios">Desafios</a>
 
 ### Borda gradiente
 
-- Tínhamos o desafio de criar bordas gradientes para o input superior e na seleção dos botões de filtro. Realizei o desafio utilizando a técnica de MAsk do CSSç
-
+- Tínhamos o desafio de criar bordas gradientes para o input superior e na seleção dos botões de filtro. Realizei o desafio utilizando a técnica de Mask do CSS.
 
 
 ## Figma do projeto
