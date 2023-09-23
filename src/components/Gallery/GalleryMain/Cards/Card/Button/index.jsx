@@ -23,6 +23,7 @@ const Button = ({isLiked, setIsLiked, id}) => {
         {
           const newValue = isThisLiked ? isLiked.filter(item => item !== id) :  [...isLiked, id];
           setIsLiked(newValue);
+          localStorage.setItem("isLiked", newValue.toString());
         }
       } 
       $isLiked={isThisLiked}></ButtonWithStyle>

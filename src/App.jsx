@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import photos from "./photos.json";
 import GlobalStyles from "./components/GlobalStyles";
@@ -30,6 +30,14 @@ const App = () => {
   const [filterTag, setFilterTag] = useState(0);
   const [filterString, setFilterString] = useState('');
   const [isLiked, setIsLiked] = useState([]);
+
+  useEffect(
+    () => {
+      const storage = localStorage.getItem("isLiked");
+      setIsLiked(storage.split(","));
+      console.log(storage.split(","));
+    }
+    , []);
 
   return (
     <FundoGradiente>
