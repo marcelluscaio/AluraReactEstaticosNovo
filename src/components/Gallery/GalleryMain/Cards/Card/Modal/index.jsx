@@ -129,6 +129,13 @@ const Modal = ({isOpen, setIsOpen, photoPath, photoTitle, photoSource, isLiked, 
     <ModalWithStyle
       ref={ref}
       onCancel={setIsOpen}
+      onClick={(e) => 
+        {
+          if(e.target.tagName === "DIALOG"){
+            setIsOpen();
+          }
+        }
+      }
     >
       <button onClick={setIsOpen} aria-label="Close"></button>
       <div className="wrapper">
