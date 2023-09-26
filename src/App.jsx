@@ -35,9 +35,8 @@ const App = () => {
     () => {
       const storage = localStorage.getItem("isLiked");
       setIsLiked(storage.split(","));
-      console.log(storage.split(","));
     }
-    , []);
+    , [""]);
 
   return (
     <FundoGradiente>
