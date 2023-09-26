@@ -33,10 +33,10 @@ const App = () => {
 
   useEffect(
     () => {
-      if(isLiked){
-        const storage = localStorage.getItem("isLiked");
-        setIsLiked(storage.split(","));
-      }
+      
+      const storage = localStorage.getItem("isLiked") ? localStorage.getItem("isLiked") : "";
+      setIsLiked(storage.split(","));
+      
     }
     , [""]);
 
